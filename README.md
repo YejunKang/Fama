@@ -4,7 +4,7 @@
 
 Fama is a powerful, transformative Discord bot that aims to connect the world's finances to an everyday platform.
 
-Fama is still in very early stages of development!
+<img src=https://github.com/user-attachments/assets/be0b7743-624b-4440-81bf-aed6b4cf7c5e alt="drawing" width="750"/>
 
 ## Features
 - Automatic Stock fetching
