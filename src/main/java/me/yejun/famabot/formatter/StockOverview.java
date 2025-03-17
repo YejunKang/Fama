@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import me.yejun.famabot.data.StockDataApiHandler;
 import me.yejun.famabot.data.news.NewsData;
 import me.yejun.famabot.data.quote.QuoteData;
+import me.yejun.famabot.util.TimeUtil;
 import net.dv8tion.jda.api.entities.channel.middleman.MessageChannel;
 
 import java.io.IOException;
@@ -12,11 +13,14 @@ import java.util.List;
 
 public class StockOverview {
 
+    public TimeUtil timeUtil = new TimeUtil();
+
     public void createStockOverview(String companyName, String symbol, MessageChannel channel) throws IOException {
+        String[] days = timeUtil.getDatesInCST();
         if (symbol != null) {
             channel.sendMessage("Fetching stock quote for " + companyName + "...").queue();
             QuoteData quoteData = StockDataApiHandler.fetchQuote(symbol);
-            String newsData = StockDataApiHandler.fetchCompanyNews(symbol, "2025-03-15", "2025-03-16");
+            String newsData = StockDataApiHandler.fetchCompanyNews(symbol, days[1], days[0]);
             if (quoteData != null && newsData != null) {
                 channel.sendMessage("> **Daily Stock Data for " + companyName + ":**\n" +
                         "Current Price: " + quoteData.c + "\n" +
