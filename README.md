@@ -5,6 +5,8 @@ Fama is a Discord bot that aims to be the ultimate stock market Discord bot, pro
 
 Discord is a highly used platform with millions of individuals using it in their daily routine, so Fama directly relays its information to Discord servers to provide the best stock market bot experience available, with a plethora of features available to anyone.
 
+Fama is still in very early stages of development!
+
 ## Features
 - Automatic Stock fetching
 > Extremely powerful feature that lists any relevant information of a mentioned stock, including the price, % daily change, recent news, etc
