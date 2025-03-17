@@ -22,3 +22,9 @@ Then set your environment variables - Should be BOT_TOKEN and API_TOKEN, Bot tok
 
 ![image](https://github.com/user-attachments/assets/05fce159-8a84-4e2c-8bc6-cea9b7db55d8)
 
+## License
+Fama uses the MIT License
+
+## Authors
+Fama Bot was created by Yejun Kang on March 14 2025
+
