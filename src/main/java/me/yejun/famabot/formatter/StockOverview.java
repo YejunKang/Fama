@@ -42,7 +42,7 @@ public class StockOverview {
                         .addField("Low Price:", String.format("%.2f", quoteData.l), true)
                         .addField("Open Price:", String.format("%.2f", quoteData.o), true)
                         .addField("Previous Close:", String.format("%.2f", quoteData.pc), true)
-                        .setFooter("Data as of March 17, 2025");
+                        .setFooter("Data as of " + days[1]);
                 channel.sendMessageEmbeds(stockEmbed.build()).queue();
                 channel.sendMessage(parseAndPrintJson(newsData)).queue();
             } else {
