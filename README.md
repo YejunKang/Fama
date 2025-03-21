@@ -5,17 +5,18 @@
 Fama is a powerful, transformative Discord bot that aims to connect the world's finances to an everyday platform.
 
 <img src=https://github.com/user-attachments/assets/be0b7743-624b-4440-81bf-aed6b4cf7c5e alt="drawing" width="750"/>
+<img src=https://github.com/user-attachments/assets/e86ea35c-6442-438a-ab98-b10066442a8a alt="drawing" width="750"/>
 
 ## Features
 - Automatic Stock fetching
 > Extremely powerful feature that lists any relevant information of a mentioned stock, including the price, % daily change, recent news, etc
 - Form 13F and Form 278-T tracking
-> Know the most recent holdings of top politicians and hedge funds. **COMING SOON**
+> Know the most recent holdings of top politicians and hedge funds. 
 
 ## Roadmap
- - [ ] Add more prettier embeds
+ - [x] Add more prettier embeds
  - [ ] Cycle through news (Currently fetches the top 2 news articles)
- - [ ] Add public form tracking
+ - [x] Add public form tracking
  - [ ] Automatic large price movement notifier
 
 
