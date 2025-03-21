@@ -6,9 +6,13 @@ package me.yejun.famabot;
 
 
 
+import me.yejun.famabot.listeners.CommandListener;
 import me.yejun.famabot.listeners.MessageListener;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.interactions.commands.OptionType;
+import net.dv8tion.jda.api.interactions.commands.build.Commands;
+import net.dv8tion.jda.api.interactions.commands.build.OptionData;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 
 public class Main {
@@ -24,9 +28,14 @@ public class Main {
     }
 
     public static void start() throws InterruptedException {
-        JDA api = JDABuilder.createDefault(BOT_TOKEN, GatewayIntent.GUILD_MESSAGES, GatewayIntent.MESSAGE_CONTENT, GatewayIntent.GUILD_MEMBERS)
-                .addEventListeners(new MessageListener())
-                .build();
-        api.awaitReady();
+        JDABuilder.createDefault(BOT_TOKEN, GatewayIntent.GUILD_MESSAGES, GatewayIntent.MESSAGE_CONTENT, GatewayIntent.GUILD_MEMBERS)
+                .addEventListeners(new MessageListener(), new CommandListener())
+                .build()
+                .updateCommands().addCommands(
+                        Commands.slash("holdings", "Get holdings of a company")
+                                .addOptions(new OptionData(OptionType.STRING, "company", "Company name", true)
+                                        .setAutoComplete(true))
+                ).queue();
+
     }
 }

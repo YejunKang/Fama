@@ -13,6 +13,8 @@ dependencies {
     implementation("net.dv8tion:JDA:5.3.0")
     implementation ("com.google.code.gson:gson:2.12.1")
     implementation ("com.fasterxml.jackson.core:jackson-databind:2.18.3")
+    implementation ("org.jsoup:jsoup:1.15.3")
+
 }
 
 tasks.getByName<Test>("test") {

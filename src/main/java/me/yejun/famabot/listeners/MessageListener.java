@@ -5,6 +5,7 @@ package me.yejun.famabot.listeners;
  */
 
 import me.yejun.famabot.Main;
+import me.yejun.famabot.data.forms.FormFilingsManager;
 import me.yejun.famabot.data.quote.QuoteData;
 import me.yejun.famabot.data.StockDataApiHandler;
 import me.yejun.famabot.formatter.StockOverview;
@@ -19,11 +20,13 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.interactions.components.buttons.Button;
 
 import java.io.IOException;
+import java.util.Map;
 
 import static me.yejun.famabot.data.stock.SpyCompaniesMap.sp500Companies;
 
 public class MessageListener extends ListenerAdapter {
     public StockOverview stockOverview = new StockOverview();
+    public FormFilingsManager formFilingsManager = new FormFilingsManager();
 
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
